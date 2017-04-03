@@ -1,0 +1,279 @@
+cpe1#show run
+Building configuration...
+
+Current configuration : 6181 bytes
+!
+! Last configuration change at 16:11:45 UTC Mon Apr 3 2017 by ec2-user
+!
+version 16.5
+service timestamps debug datetime msec
+service timestamps log datetime msec
+platform qfp utilization monitor load 80
+no platform punt-keepalive disable-kernel-core
+platform console virtual
+!
+hostname cpe1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging persistent size 1000000 filesize 8192 immediate
+!
+no aaa new-model
+!
+!
+!         
+!
+!
+!
+!
+!
+!
+
+no ip domain lookup
+ip domain name virl.info
+!
+!
+!
+ipv6 unicast-routing
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+! 
+!         
+! 
+! 
+!
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-1978749484
+enrollment selfsigned
+subject-name cn=IOS-Self-Signed-Certificate-1978749484
+revocation-check none
+rsakeypair TP-self-signed-1978749484
+!
+crypto pki trustpoint TP-self-signed-4062572502
+enrollment selfsigned
+subject-name cn=IOS-Self-Signed-Certificate-4062572502
+revocation-check none
+rsakeypair TP-self-signed-4062572502
+!         
+crypto pki trustpoint TP-self-signed-1223143313
+enrollment selfsigned
+subject-name cn=IOS-Self-Signed-Certificate-1223143313
+revocation-check none
+rsakeypair TP-self-signed-1223143313
+!
+crypto pki trustpoint TP-self-signed-425434507
+enrollment selfsigned
+subject-name cn=IOS-Self-Signed-Certificate-425434507
+revocation-check none
+rsakeypair TP-self-signed-425434507
+!
+crypto pki trustpoint TP-self-signed-2748014365
+enrollment selfsigned
+subject-name cn=IOS-Self-Signed-Certificate-2748014365
+revocation-check none
+rsakeypair TP-self-signed-2748014365
+!
+crypto pki trustpoint TP-self-signed-1671661528
+enrollment selfsigned
+subject-name cn=IOS-Self-Signed-Certificate-1671661528
+revocation-check none
+rsakeypair TP-self-signed-1671661528
+!
+!
+crypto pki certificate chain TP-self-signed-1978749484
+certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 31393738 37343934 3834301E 170D3137 30333239 31343434 
+  32375A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 39373837 
+  34393438 34308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201 
+  0A028201 0100E3D9 212C0A96 AC46E378 F20D62E6 A47261AB 28D2CB1C 467AB7AF 
+  D1C73FE9 630A1865 0651DA9F E8668103 5385C206 91A1C639 2A19FD82 1D1F614E 
+  447B91B4 2D0A712B B41F2C43 0DEB9215 0455AA75 904CBD30 0E7895E6 C6AE60BD 
+  E3D144FF 26832E37 FE08578F 972EA350 92F08E2C EEDFB6D1 F128C5DD 3B68F13A 
+  AE0ABEAC 7FF6E04F A705B658 8E327608 F19167AD 56FAA960 4DB6D99C 56819CB6 
+  F729A087 86EC3667 91A7DC85 6558FB2A 85AA44C9 77B93ED0 D914A72B 408052D8 
+  E36EC172 AFED5124 FB6E5F0F 1C0A6E87 25E7CA91 09FD724F 8BFE3412 BBF60977 
+  CE635D7A D259E23F 7FBB71AB 15EC6A70 EBB6FBCF 8130CFB1 ADE8E66E 7D8CB89E 
+  65488D42 61C50203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 
+  301F0603 551D2304 18301680 1430011D 8593DD51 737D3960 19F3A61B E533B24A 
+  90301D06 03551D0E 04160414 30011D85 93DD5173 7D396019 F3A61BE5 33B24A90 
+  300D0609 2A864886 F70D0101 05050003 82010100 40A637C4 958A0CFB 98C7BD11 
+  72A29DA1 F81E05F2 80970DEB 5DB88B20 A3406FBF 4FFB7105 ECB98FD4 9DD68C0F 
+  20D2069A 0D40F6CC F10E0E53 03B0534E 6F1F1594 C4E4F61B 605C67DA 24E3047F 
+  97F45EBB E5831FBF 6DE7A782 4EECBE55 671B8262 B3BE7846 A5FB7E1B 6CF570C5 
+  E7292A0B F015B743 FE48A162 FBE2057C B6BA2DD0 B75B8E9D 9E54F026 ED76161E 
+  F9723E44 A141DAA2 2FAE442E E123351F E0BE7C5A D53EBFD7 99833E2A DC72AB9D 
+  F61CEF18 EA70A999 20086F75 181FADB9 7D671671 22A6225D FEF38177 EAE00628 
+  83492E41 65AA7766 BFF4CE1A A48EB0B0 0FF732C0 1E77EDC9 0053A8DA CC4617DD 
+  D8F1D7E2 B61F82DF 493F5337 91309174 535A8CB0
+        quit
+crypto pki certificate chain TP-self-signed-4062572502
+crypto pki certificate chain TP-self-signed-1223143313
+crypto pki certificate chain TP-self-signed-425434507
+crypto pki certificate chain TP-self-signed-2748014365
+crypto pki certificate chain TP-self-signed-1671661528
+!
+!
+!
+!
+!
+!
+!
+!
+license udi pid CSR1000V sn 9ODXEPPQM83
+license accept end user agreement
+license boot level ax
+diagnostic bootup level minimal
+!
+spanning-tree extend system-id
+!
+!
+username ec2-user privilege 15 secret 5 $1$YTh1$r6MR1ozo7Y5VygbwadRKR1
+!
+redundancy
+!
+!
+!
+!
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+crypto isakmp policy 10
+encr aes
+authentication pre-share
+crypto isakmp key cisco address 0.0.0.0        
+!
+!
+crypto ipsec transform-set IKEv1 esp-aes esp-sha-hmac 
+ mode transport
+!
+crypto ipsec profile DMVPN_IKEv1
+set security-association lifetime seconds 7200
+set transform-set IKEv1 
+!
+!
+!
+!
+!
+!
+! 
+! 
+!
+!
+interface Loopback100
+ip address 12.0.0.1 255.255.255.255
+!
+interface Tunnel0
+ip address 178.18.40.2 255.255.255.0
+no ip redirects
+ip mtu 1400
+ip nhrp authentication cisco
+ip nhrp map 178.18.40.1 52.41.158.124
+ip nhrp map multicast 52.41.158.124
+ip nhrp network-id 1
+ip nhrp nhs 178.18.40.1
+ip tcp adjust-mss 1200
+load-interval 30
+tunnel source GigabitEthernet1
+tunnel mode gre multipoint
+tunnel key 0
+tunnel protection ipsec profile DMVPN_IKEv1
+!
+interface GigabitEthernet1
+ip address dhcp
+load-interval 30
+negotiation auto
+no mop enabled
+no mop sysid
+!
+interface GigabitEthernet2
+no ip address
+shutdown
+negotiation auto
+no mop enabled
+no mop sysid
+!
+!
+router eigrp 1
+network 12.0.0.0 0.0.0.255
+network 178.18.40.0 0.0.0.255
+auto-summary
+passive-interface default
+no passive-interface Tunnel0
+!
+
+threat-visibility
+!
+virtual-service csr_mgmt
+ip shared host-interface GigabitEthernet1
+activate
+!         
+ip forward-protocol nd
+ip http server
+ip http authentication local
+ip http secure-server
+ip route 0.0.0.0 0.0.0.0 GigabitEthernet1 10.204.0.1
+!
+ip ssh rsa keypair-name ssh-key
+ip ssh version 2
+ip ssh pubkey-chain
+  username ec2-user
+   key-hash ssh-rsa AB75A036D99B839B83054BD19A2FA911 ec2-user
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!        
+ !
+!
+!
+!
+!
+!
+line con 0
+exec-timeout 0 0
+stopbits 1
+line vty 0 4
+exec-timeout 0 0
+logging synchronous
+login local
+transport input ssh
+!
+!
+!
+!
+!
+!
+end
+
+cpe1#
